@@ -9,4 +9,3 @@ gunicorn==20.0.4
 uvloop
 httptools
 lightgbm
-uvicorb
