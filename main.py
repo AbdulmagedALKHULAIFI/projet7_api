@@ -16,8 +16,8 @@ import pandas as pd
 app = FastAPI()
 
 
-# proba_pickle = 'proba_model.sav'
-# proba_model = pickle.load(open(proba_pickle, 'rb'))
+proba_pickle = 'proba_model.sav'
+proba_model = pickle.load(open(proba_pickle, 'rb'))
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
