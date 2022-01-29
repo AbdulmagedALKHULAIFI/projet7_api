@@ -16,9 +16,6 @@ import pandas as pd
 app = FastAPI()
 
 
-proba_pickle = 'proba_model.sav'
-proba_model = pickle.load(open(proba_pickle, 'rb'))
-
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
 def index():
@@ -27,6 +24,9 @@ def index():
 
 @app.post('/predictUnpaid')
 def predict_unpaid(data:Borrower):
+    proba_pickle = 'proba_model.sav'
+    proba_model = pickle.load(open(proba_pickle, 'rb'))
+	print(proba_model)
     data = data.dict()
     PAYMENT_RATE=data['PAYMENT_RATE']
     AMT_ANNUITY=data['AMT_ANNUITY']
