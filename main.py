@@ -26,7 +26,6 @@ def index():
 def predict_unpaid(data:Borrower):
     proba_pickle = 'proba_model.sav'
     proba_model = pickle.load(open(proba_pickle, 'rb'))
-	print(proba_model)
     data = data.dict()
     PAYMENT_RATE=data['PAYMENT_RATE']
     AMT_ANNUITY=data['AMT_ANNUITY']
