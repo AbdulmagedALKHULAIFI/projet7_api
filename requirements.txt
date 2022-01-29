@@ -4,7 +4,6 @@ scikit-learn
 matplotlib
 pandas
 fastapi
-pickle
 uvicorn
 gunicorn==20.0.4
 uvloop
